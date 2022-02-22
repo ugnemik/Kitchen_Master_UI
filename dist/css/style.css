@@ -19,8 +19,8 @@ body {
 }
 
 .intro {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7))), url(/dist/img/cooking.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/dist/img/cooking.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7))), url(../img/cooking.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/cooking.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
