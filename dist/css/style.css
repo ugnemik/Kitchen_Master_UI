@@ -1,0 +1,209 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7))), url(/dist/img/cooking.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/dist/img/cooking.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 .5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 50vh;
+}
+
+.intro .top-text {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-top: 0;
+  padding-top: 2px;
+  border-top: 5px solid #E6B439;
+  -o-border-image: linear-gradient(to left, #C03228, #E6B439) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(#C03228), to(#E6B439)) 1;
+     border-image: linear-gradient(to left, #C03228, #E6B439) 1;
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+  color: #E6B439;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.intro .title {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.intro .title strong {
+  font-weight: 700;
+  display: block;
+}
+
+.intro .subtitle {
+  margin-bottom: 0;
+  font-size: 1.3125rem;
+  color: #E6B439;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.main-content {
+  padding: 2em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-content .contact-title {
+  font-size: 1.3125rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main-content .contact-subtitle {
+  margin-top: 0;
+  color: #E6B439;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.main-content .contact-small-text {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+  max-width: 200px;
+}
+
+.main-content .email-collector {
+  width: 80%;
+  max-width: 300px;
+}
+
+.main-content .email-collector input, .main-content .email-collector .btn {
+  font-family: inherit;
+  text-align: inherit;
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+.main-content .email-collector input {
+  border: 1px solid #404040;
+  padding: .5em;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+.main-content .email-collector input:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main-content .email-collector .btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+
+.main-content .email-collector .btn-primary {
+  background: -webkit-gradient(linear, right top, left top, from(#C03228), to(#E6B439));
+  background: linear-gradient(to left, #C03228, #E6B439);
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+.main-content .email-collector .btn-primary:hover, .main-content .email-collector .btn-primary:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (min-width: 550px) {
+  body {
+    font-size: 1.125rem;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 100vh;
+  }
+  main .intro {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+  main .intro .title {
+    font-size: 3.5rem;
+  }
+  main .intro .subtitle {
+    font-size: 1.75rem;
+  }
+  main .main-content {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+  main .main-content .contact-title {
+    font-size: 1.75rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,174 @@
+$yellow: #E6B439;
+$red: #C03228;
+$linear-gradient: linear-gradient(to left, $red, $yellow);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
+}
+
+.intro > *,
+.main-content > * {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/dist/img/cooking.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 .5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+
+    .top-text {
+        order: 1;
+        margin-top: 0;
+        padding-top: 2px;
+        border-top: 5px solid $yellow;
+        border-image: $linear-gradient 1;
+        font-size: 0.625rem;
+        letter-spacing: 1px;
+        color: $yellow;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .title {
+        order: 2;
+        font-size: 2.25rem;
+        font-weight: 300 ;
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        strong {
+            font-weight: 700;
+            display: block;
+        }
+    }
+
+    .subtitle {
+        margin-bottom: 0;
+        font-size: 1.3125rem;
+        color: $yellow;
+        font-weight: 900;
+        text-transform: uppercase;
+        order: 3;
+    }
+}
+
+.main-content {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .contact-title {
+        font-size: 1.3125rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .contact-subtitle {
+        margin-top: 0;
+        color: $yellow;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .contact-small-text {
+        font-size: 0.625rem;
+        letter-spacing: 1px;
+        max-width: 200px;
+    }
+    
+    .email-collector {
+        width: 80%;
+        max-width: 300px;
+
+        input, .btn {
+            font-family: inherit;
+            text-align: inherit;
+            width: 100%;
+            margin-top: 1em;
+            border-radius: 5px;
+        }
+
+        input {
+            border: 1px solid #404040;
+            padding: .5em;
+            transform: scale(1);
+            transition: transform 250ms;
+            &:focus {
+                transform: scale(1.1);
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1em 1.5em;
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            border: 0;
+            cursor: pointer;
+
+            &-primary {
+                background: $linear-gradient;
+                color: #fff;
+                transform: scale(1);
+                transition: transform 250ms;
+
+                &:hover, &:focus {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 550px) {
+
+    body {
+        font-size: 1.125rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+
+        .intro {
+            flex: 50%;
+
+            .title {
+                font-size: 3.5rem;
+
+            }
+            .subtitle {
+                font-size: 1.75rem ;
+            }
+        }
+
+        .main-content {
+            flex: 50%;
+
+            .contact-title {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
